@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cammino_Couponlist>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Cammino_Couponlist>
+    </modules>
+</config> 

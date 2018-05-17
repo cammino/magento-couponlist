@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Cammino_Couponlist>
+			<version>0.0.1</version>
+		</Cammino_Couponlist>
+	</modules>
+	<admin>
+    <routers>
+        <adminhtml>
+            <args>
+                <modules>
+                    <Cammino_Couponlist before="Mage_Adminhtml">Cammino_Couponlist</Cammino_Couponlist>
+                </modules>
+            </args>
+        </adminhtml>
+    </routers>
+</admin> 
+	<global>
+		
+		<helpers>
+            <couponlist>
+                <class>Cammino_Couponlist_Helper</class>
+            </couponlist>
+        </helpers>
+        <models>
+        	<couponlist>
+        		<class>Cammino_Couponlist_Model</class>
+        	</couponlist>
+        </models>
+	    <blocks>
+	    	<adminhtml>
+	    		<rewrite>
+	   				<customer_edit_tabs>Cammino_Couponlist_Block_Adminhtml_Customer_Edit_Tabs</customer_edit_tabs>
+	    		</rewrite>
+	   		</adminhtml>
+	   		<couponlist>
+	   			<class>Cammino_Couponlist_Block</class>
+	   		</couponlist>
+	  	</blocks>
+	</global>
+</config>
